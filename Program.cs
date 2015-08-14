@@ -11,7 +11,12 @@ namespace ConsoleApplication3
         static void Main(string[] args)
         {
             Console.WriteLine("How many numbers?");
+<<<<<<< HEAD
             printTable(Int32.Parse(Console.ReadLine()));              //Removed topNumber as a class variable and used it as a parameter instead.
+=======
+            topNumber = Int32.Parse(Console.ReadLine());             //Changed variable names to fit typical C# style
+            printTable();
+>>>>>>> origin/master
         }
 
         private static void printTable(int topNumber)                 //Changed variable names to fit typical C# style.
