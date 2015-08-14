@@ -16,16 +16,15 @@ namespace ConsoleApplication3
 
         private static void printTable(int topNumber)                 //Changed variable names to fit typical C# style.
         {
-            int x = 1;
             for (int i = 1; i <= topNumber; i++)
             {
-                for (int z = 1; z <= topNumber; z++)
-                {                 
-                    int d = (int)Math.Floor(Math.Log10(z * x) + 1);  //Removed the list of if statements and replaced it with 
-                    Console.Write((z * x) + new String(' ', 7 - d)); //computation. 
+                for (int y = 1; y <= topNumber; z++)
+                {
+                    int z = x * y;
+                    int d = (int)Math.Floor(Math.Log10(z) + 1);       //Removed the list of if statements and replaced it with 
+                    Console.Write((z) + new String(' ', 7 - d));      //computation. 
                 }
-                x++;
-                Console.WriteLine("\n\n");                           //Replaced the for loop for adding new lines.  
+                Console.WriteLine("\n\n");                            //Replaced the for loop for adding new lines.  
             }
             Console.ReadLine();
         }
