@@ -8,51 +8,29 @@ namespace ConsoleApplication3
 {
     class Program
     {
-        private static int top_number;
+        private static int topNumber;
 
         static void Main(string[] args)
         {
             Console.WriteLine("How many numbers?");
-            top_number = Int32.Parse(Console.ReadLine());
-            print_table();
+            topNumber = Int32.Parse(Console.ReadLine());  //Changed variable names to fit typical C# style
+            printTable();
         }
 
-        private static void print_table()
+        private static void printTable()
         {
             int x = 1;
-            for (int i = 1; i <= top_number; i++)
+            for (int i = 1; i <= topNumber; i++)
             {
-                for (int z = 1; z <= top_number; z++)
-                {
-                    if (Math.Floor(Math.Log10(z * x) + 1) == 1)
-                    {
-                        Console.Write((z * x) + "      ");
-                    }
-                    if (Math.Floor(Math.Log10(z * x) + 1) == 2)
-                    {
-                        Console.Write((z * x) + "     ");
-                    }
-                    if (Math.Floor(Math.Log10(z * x) + 1) == 3)
-                    {
-                        Console.Write((z * x) + "    ");
-                    }
-                    if (Math.Floor(Math.Log10(z * x) + 1) == 4)
-                    {
-                        Console.Write((z * x) + "  ");
-                    }
+                for (int z = 1; z <= topNumber; z++)
+                {                 
+                    int d = (int)Math.Floor(Math.Log10(z * x) + 1);  //Removed the list of if statements and replaced it with 
+                    Console.Write((z * x) + new String(' ', 7 - d)); // computation. 
                 }
                 x++;
-                print_whitespace();              
+                Console.WriteLine("\n\n");   //Replaced the for loop for adding new lines.  
             }
             Console.ReadLine();
-        }
-
-        private static void print_whitespace() 
-        {
-            for (int i = 0; i < 2; i++)
-            {
-                Console.Write("\n");
-            }
         }
     }
 }
