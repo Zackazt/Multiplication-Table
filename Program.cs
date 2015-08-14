@@ -13,7 +13,7 @@ namespace ConsoleApplication3
         static void Main(string[] args)
         {
             Console.WriteLine("How many numbers?");
-            topNumber = Int32.Parse(Console.ReadLine());  //Changed variable names to fit typical C# style
+            topNumber = Int32.Parse(Console.ReadLine());             //Changed variable names to fit typical C# style
             printTable();
         }
 
@@ -28,7 +28,7 @@ namespace ConsoleApplication3
                     Console.Write((z * x) + new String(' ', 7 - d)); // computation. 
                 }
                 x++;
-                Console.WriteLine("\n\n");   //Replaced the for loop for adding new lines.  
+                Console.WriteLine("\n\n");                           //Replaced the for loop for adding new lines.  
             }
             Console.ReadLine();
         }
