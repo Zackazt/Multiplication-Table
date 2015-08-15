@@ -18,9 +18,9 @@ namespace ConsoleApplication3
         {
             for (int i = 1; i <= topNumber; i++)
             {
-                for (int y = 1; y <= topNumber; z++)
+                for (int y = 1; y <= topNumber; y++)
                 {
-                    int z = x * y;
+                    int z = i * y;
                     int d = (int)Math.Floor(Math.Log10(z) + 1);       //Removed the list of if statements and replaced it with 
                     Console.Write((z) + new String(' ', 7 - d));      //computation. 
                 }
